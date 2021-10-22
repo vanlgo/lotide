@@ -7,18 +7,18 @@ const assertEqual = function(actual, expected) {
 };
 
 const tail = function(arrayTail) {
-  let a = [];
-  for (let x = arrayTail.length - 2; x < arrayTail.length; x++) {
-    a.push(arrayTail[x]);
-  }
+  let a = Array.from(arrayTail);
+  a.shift();
   return a;
 };
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2); // ensure we get back two elements
-assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result[1], "Labs");
-
+// Test Case: Check the original array
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 tail(words); // no need to capture the return value since we are not checking it
 assertEqual(words.length, 3); // original array should still have 3 elements!
+
+// Test Case 1: Check the returned array elements
+const result = tail(["Hello", "Lighthouse", "Labs"]);
+assertEqual(result.length, 2); // ensure we get back two elements
+assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
+assertEqual(result[1], "Labs"); // ensure second element is "Labs"
