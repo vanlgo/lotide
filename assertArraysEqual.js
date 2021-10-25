@@ -3,7 +3,6 @@ const eqArrays = function(firstArray, secondArray) {
   if (firstArray.length === secondArray.length) {
     for (let i = 0; i < firstArray.length; i++) {
       if (firstArray[i] === secondArray[i]) {
-        console.log(firstArray[i], secondArray[i])
         match = true;
       } else {
         return match = false;
