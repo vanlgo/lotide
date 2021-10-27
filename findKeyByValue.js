@@ -10,13 +10,7 @@ const findKeyByValue = function (key, value) {
   let foundValue;
   for (const k in key) {
     if (key[k] === value) {
-      if (k !== value) {
-        foundValue;
-        return foundValue;
-      } else {
-        foundValue = k;
-        return foundValue
-      }
+      foundValue = k;
     }
   }
   return foundValue;
@@ -25,7 +19,7 @@ const findKeyByValue = function (key, value) {
 const bestTVShowsByGenre = { 
   sci_fi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
-  cop:  "The Wire"
+  drama:  "The Wire"
 };
 
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
