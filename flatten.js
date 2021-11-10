@@ -38,5 +38,5 @@ const flatten = function(nestArray) {
   return newArray;
 };
 
-const flattened = flatten([1, 2, [3, 4], 5, [6]]) // => [1, 2, 3, 4, 5, 6]
+const flattened = flatten([1, 2, [3, 4], 5, [6]]); // => [1, 2, 3, 4, 5, 6]
 console.log(assertArraysEqual(flatten(flattened), flattened));
