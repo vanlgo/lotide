@@ -1,4 +1,4 @@
-const assertEqual = require('./assertEqual');
+// const assertEqual = require('./assertEqual');
 
 const head = function(arrayHead) {
   let a = arrayHead[0];
@@ -6,4 +6,4 @@ const head = function(arrayHead) {
 };
 
 
-assertEqual(head(["Lighthouse Labs", "Bootcamp"]), "Lighthouse Labs");
+module.exports = head;
