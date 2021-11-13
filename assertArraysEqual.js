@@ -4,8 +4,10 @@ const assertArraysEqual = function(x, y) {
   const matchCheck = eqArrays(x, y);
   if (matchCheck) {
     console.log(`✅✅✅ Assertion Passed:  ${x} === ${y}`);
+    return true;
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${x} !=== ${y}`);
+    return false;
   }
 };
 
