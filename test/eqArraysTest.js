@@ -1,11 +1,20 @@
-const assertEqual = require('../assertEqual');
+const { assert } = require('chai')
+// const assertEqual = require('../assertEqual');
 const eqArrays = require('../eqArrays');
 
-//Eq Arrays
-console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
-console.log(eqArrays([1, 2, 3], [3, 2, 1])); // => false
 
-console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
+describe("#eqArrays", () => {
+  it("should pass assertion", () => {
+    const words = ['hello', 'world', 'lighthouse'];
+    assert.isTrue(eqArrays(words, ['hello', 'world', 'lighthouse']));
+  });
 
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), true); // => should PASS
+  it ("should not pass assertion if arrays are same length, with different values", () => {
+    const wrongWords = ['I', 'just', 'want'];
+    assert.isFalse(eqArrays(wrongWords, ['hello', 'world', 'lighthouse']));
+  });
+
+  it ("should not pass assertion, if arrays not same length", () => {
+    assert.isFalse(eqArrays(['hello', 'world', 'lighthouse'], ['world', 'lighthouse']));
+  });
+})

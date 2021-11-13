@@ -1,10 +1,6 @@
 const { assert } = require('chai');
 const assertArraysEqual = require('../assertArraysEqual');
 
-//Assert Array Equal
-// const words = ["hello", "world", "lighthouse"];
-// assertArraysEqual(words, ["hello", "world", "lighthouse"]);
-
 describe("#assertArrayEqual", () => {
   it("should pass assertion if const words equals ['hello', 'world', 'lighthouse']", () => {
     const words = ['hello', 'world', 'lighthouse'];

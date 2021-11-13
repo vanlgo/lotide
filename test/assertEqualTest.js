@@ -1,6 +1,12 @@
 const { assert } = require('chai');
 const assertEqual = require('../assertEqual');
 
-// Assert Equal
-// assertEqual("Lighthouse Labs", "Bootcamp");
-// assertEqual(1, 1);
+describe("#assertEqual", () => {
+  it("should pass assertion", () => {
+    assert.isTrue(assertEqual(1, 1));
+  });
+
+  it ("should not pass assertion", () => {
+    assert.isFalse(assertEqual("Lighthouse Labs", "Bootcamp"));
+  });
+})

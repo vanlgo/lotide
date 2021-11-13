@@ -2,7 +2,7 @@
 // const assertEqual = require('./assertEqual');
 
 const tail = function(arrayTail) {
-  let a = Array.from(arrayTail);
+  let a = arrayTail.slice();
   a.shift();
   return a;
 };
