@@ -11,3 +11,5 @@ const assertArraysEqual = function(x, y) {
 
 // const words = ["hello", "world", "lighthouse"];
 // assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+
+module.exports = assertArraysEqual;

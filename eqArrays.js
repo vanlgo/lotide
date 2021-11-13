@@ -1,4 +1,4 @@
-const assertEqual = require('./assertEqual');
+// const assertEqual = require('./assertEqual');
 
 // should refactor, will attempt later
 const eqArrays = function(firstInput, secondInput) {
