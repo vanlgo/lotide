@@ -5,6 +5,6 @@ const tail = require('./tail');
 
 module.exports = {
   head: head,
-  middle: middle
-  tail: tail,
+  middle: middle,
+  tail: tail
 };
