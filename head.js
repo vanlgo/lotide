@@ -1,7 +1,8 @@
 // const assertEqual = require('./assertEqual');
 
 const head = function(arrayHead) {
-  return arrayHead.shift();
+  let arr = arrayHead.slice();
+  return arr.shift();
 };
 
 module.exports = head;
