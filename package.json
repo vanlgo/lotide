@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@vanlgo/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "Practice Lotide Project",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "mocha"
@@ -20,7 +20,7 @@
     "type": "git",
     "url": "git+https://github.com/vanlgo/lotide.git"
   },
-  "author": "",
+  "author": "Van Go",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/vanlgo/lotide/issues"
