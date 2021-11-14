@@ -1,3 +1,4 @@
+// Don't need anymore
 const { assert } = require('chai');
 const assertArraysEqual = require('../assertArraysEqual');
 
