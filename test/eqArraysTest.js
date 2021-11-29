@@ -1,5 +1,4 @@
 const { assert } = require('chai')
-// const assertEqual = require('../assertEqual');
 const eqArrays = require('../eqArrays');
 
 
