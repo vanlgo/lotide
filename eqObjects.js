@@ -1,43 +1,28 @@
-const eqArrays = function(firstInput, secondInput) {
-  let match;
-  if (firstInput.length === secondInput.length) {
-    for (let i = 0; i < firstInput.length; i++) {
-      if (firstInput[i] === secondInput[i]) {
-        match = true;
-      } else {
-        return match = false;
-      }
-    }
-  } else {
-    match = false;
-  }
-  return match;
-};
+const eqArrays = require('./eqArrays');
 
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
-const eqObjects = function(object1, object2) {
-  let check;
-  const oneKeys = Object.keys(object1); const twoKeys = Object.keys(object2);
-  if (oneKeys.length === twoKeys.length) {
-    for (const key of oneKeys) {
-      const tempOne = object1[key]; const tempTwo = object2[key];
-      if (Array.isArray(tempOne)) {
-        if (eqArrays(tempOne, tempTwo)) {
-          check = true;
-        } else {
-          return check = false;
-        }
-      } else if (object1[key] === object2[key]) {
-        check = true;
-      } else {
-        return check = false;
-      }
-    }
-  } else {
-    return check = false;
+const eqObjects = function(obj1, obj2) {
+  const oneKeys = Object.keys(obj1);
+  const twoKeys = Object.keys(obj2);
+
+  if (oneKeys.length !== twoKeys.length) {
+    return false;
   }
-  return check;
+
+  for (const key of oneKeys) {
+    const keyOne = obj1[key];
+    const keyTwo = obj2[key];
+    if (Array.isArray(keyOne)) {
+      if (!eqArrays(keyOne, keyTwo)) {
+        return false;
+      }
+    } else if (keyOne !== keyTwo) {
+      return false;
+    }
+  }
+
+  return true;
 };
 
 const ab = { a: "1", b: "2" };
