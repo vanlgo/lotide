@@ -1,32 +1,9 @@
-const eqArrays = function(firstArray, secondArray) {
-  let match;
-  if (firstArray.length === secondArray.length) {
-    for (let i = 0; i < firstArray.length; i++) {
-      if (firstArray[i] === secondArray[i]) {
-        match = true;
-      } else {
-        return match = false;
-      }
-    }
-  } else {
-    match = false;
-  }
-  return match;
-};
+const assertArraysEqual = require("./assertArraysEqual");
 
-const assertArraysEqual = function(x, y) {
-  const matchCheck = eqArrays(x, y);
-  if (matchCheck) {
-    console.log(`✅✅✅ Assertion Passed:  ${x} === ${y}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${x} !=== ${y}`);
-  }
-};
-
-const flatten = function(nestArray) {
+const flatten = (nestArray) => {
   let newArray = [];
   for (const i of nestArray) {
-    if (Array.isArray(i)) {
+    if (Array.isArray(i)) { // Checks if the next value in the array is an array
       let tempArray = i.slice();
       for (const t of tempArray) {
         newArray.push(t);
@@ -40,3 +17,5 @@ const flatten = function(nestArray) {
 
 const flattened = flatten([1, 2, [3, 4], 5, [6]]); // => [1, 2, 3, 4, 5, 6]
 console.log(assertArraysEqual(flatten(flattened), flattened));
+
+module.exports = flatten;

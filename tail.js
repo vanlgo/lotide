@@ -1,22 +1,11 @@
-
 // const assertEqual = require('./assertEqual');
 
-const tail = function(arrayTail) {
-  let a = arrayTail.slice();
+const tail = function(arr) {
+  let a = arr.slice(); // creating new array to not disturb input array
   a.shift();
   return a;
 };
 
+// test code replaces with mocha and chai test
+
 module.exports = tail;
-
-
-// // Test Case: Check the original array
-// const words = ["Yo Yo", "Lighthouse", "Labs"];
-// tail(words); 
-// assertEqual(words.length, 3);
-
-// // Test Case 1: Check the returned array elements
-// const result = tail(["Hello", "Lighthouse", "Labs"]);
-// assertEqual(result.length, 2);
-// assertEqual(result[0], "Lighthouse"); 
-// assertEqual(result[1], "Labs"); 

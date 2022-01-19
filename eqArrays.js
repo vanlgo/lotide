@@ -1,18 +1,17 @@
 // const assertEqual = require('./assertEqual');
 
-// should refactor, will attempt later
 const eqArrays = function(firstInput, secondInput) {
+  let check = false;
   if (firstInput.length === secondInput.length) {
     for (let i = 0; i < firstInput.length; i++) {
       if (firstInput[i] === secondInput[i]) {
-        return true;
+        check = true;
       } else {
-        return false;
+        return check = false;
       }
     }
-  } else {
-    return false;
   }
+  return check;
 };
 
 module.exports = eqArrays;

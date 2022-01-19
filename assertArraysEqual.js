@@ -1,6 +1,7 @@
 const eqArrays = require('./eqArrays');
 
-const assertArraysEqual = function(x, y) {
+const assertArraysEqual = (x, y) => {
+  // variable  that calls eqArrays to check if variables are equal
   const matchCheck = eqArrays(x, y);
   if (matchCheck) {
     console.log(`✅✅✅ Assertion Passed:  ${x} === ${y}`);
@@ -11,7 +12,6 @@ const assertArraysEqual = function(x, y) {
   }
 };
 
-// const words = ["hello", "world", "lighthouse"];
-// assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+// test code replaces with mocha and chai test
 
 module.exports = assertArraysEqual;

@@ -7,8 +7,8 @@ describe("#assertArrayEqual", () => {
     assert.isTrue(assertArraysEqual(words, ['hello', 'world', 'lighthouse']));
   });
 
-  it ("should not pass assertion, if length of arrays are not the same", () => {
+  it("should not pass assertion, if length of arrays are not the same", () => {
     const short = ['world', 'lighthouse'];
     assert.isFalse(assertArraysEqual(short, ['hello', 'world', 'lighthouse']));
   });
-})
+});
