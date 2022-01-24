@@ -8,11 +8,13 @@ const map = function(array, callback) {
   return results;
 };
 
+// TEST CODE
+
 const words = ["Slow", "Dancing", "in", "the", "Dark"];
 
 const results1 = map(words, word => word[0]);
-console.log(results1);
+const test = ['S', 'D', 'i', 't', 'D'];
 
-assertArraysEqual(words, results1);
+assertArraysEqual(test, results1);
 
 module.exports = map;

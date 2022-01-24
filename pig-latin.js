@@ -1,3 +1,5 @@
+const assertEqual = require('./assertEqual');
+
 const input = process.argv.splice(2);
 
 const transformLatin = function(toLatin) {
@@ -11,4 +13,9 @@ const transformLatin = function(toLatin) {
   return pigLatinned.join(" ");
 };
 
-console.log(transformLatin(input));
+// TEST CODE
+
+// NODE INPUT: this is all just gibberish
+assertEqual(transformLatin(input), "histay siay llaay ustjay ibberishgay"); // should pass with input
+
+module.exports = transformLatin;

@@ -15,6 +15,7 @@ const assertObjectsEqual = require('./assertObjectsEqual');
 const map = require('./map');
 const takeUntil = require('./takeUntil');
 const findKey = require('./findKey');
+const transformLatin = require('./pig-latin');
 
 module.exports = {
   head,
@@ -32,5 +33,6 @@ module.exports = {
   assertObjectsEqual,
   map,
   takeUntil,
-  findKey
+  findKey,
+  transformLatin
 };
